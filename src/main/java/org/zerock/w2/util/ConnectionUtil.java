@@ -1,4 +1,4 @@
-package org.zerock.w2.dao;
+package org.zerock.w2.util;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;

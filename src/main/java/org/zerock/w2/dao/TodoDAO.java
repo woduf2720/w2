@@ -2,6 +2,7 @@ package org.zerock.w2.dao;
 
 import lombok.Cleanup;
 import org.zerock.w2.domain.TodoVO;
+import org.zerock.w2.util.ConnectionUtil;
 
 import java.sql.Connection;
 import java.sql.Date;
@@ -17,9 +18,9 @@ public class TodoDAO {
         String now = null;
 
         try(
-            Connection connection = ConnectionUtil.INSTANCE.getConnection();
-            PreparedStatement preparedStatement = connection.prepareStatement("select now()");
-            ResultSet resultSet = preparedStatement.executeQuery()
+                Connection connection = ConnectionUtil.INSTANCE.getConnection();
+                PreparedStatement preparedStatement = connection.prepareStatement("select now()");
+                ResultSet resultSet = preparedStatement.executeQuery()
         ){
             resultSet.next();
 
